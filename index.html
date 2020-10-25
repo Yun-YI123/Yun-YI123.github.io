@@ -40,7 +40,16 @@
 
 
   
-<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/jquery-3.1.1.min.js">
+	$('.btn').hover(function () {
+   $(this).addClass('hover'); 
+}, function () { 
+   $(this).removeClass('hover'); 
+});
+
+$('.btn').hover(function () { 
+  $(this).toggleClass('hover'); 
+});</script>
 
 
   <!-- Bootstrap core CSS -->
