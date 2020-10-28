@@ -42,17 +42,32 @@
   
 <script src="/js/jquery-3.1.1.min.js">
 </script>
-<script> 	
+<script> 
 $(document).ready(function(){
-  $("button").click(function(){
-    var div=$("div");
-    div.animate({height:'300px',opacity:'0.4'},"slow");
-    div.animate({width:'300px',opacity:'0.8'},"slow");
-    div.animate({height:'100px',opacity:'0.4'},"slow");
-    div.animate({width:'100px',opacity:'0.8'},"slow");
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
   });
 });
-</script> 
+</script>
+ 
+<style type="text/css"> 
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+</style>	
+	
 
 
   <!-- Bootstrap core CSS -->
@@ -65,9 +80,9 @@ $(document).ready(function(){
 
 
   <body>
-<button>enter</button>
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;">
-</div>
+<button id="stop">stop</button>
+<div id="flip">touch</div>
+<div id="panel">WELCOME~~</div>
   
 
 
